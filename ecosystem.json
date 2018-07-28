@@ -29,8 +29,8 @@
       ref  : 'origin/master',
       repo : 'git@github.com:nbutmickey/mickey-ftp.git',
       path : '/root/myProject/production',
-      "ssh_options": "StrictHostKeyChecking=false",
-      'post-deploy' : 'npm install && pm2 startOrRestart ecosystem.json --env production'
+      ssh_options: 'StrictHostKeyChecking=false',
+      post-deploy : 'npm install && pm2 startOrRestart ecosystem.json --env production'
     },
     dev : {
       user : 'node',
