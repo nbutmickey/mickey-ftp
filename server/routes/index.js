@@ -14,7 +14,7 @@ router.get('/token', function(req, res, next) {
 //连接数据库
 let conn=mysql.createConnection(sqlConfig.mysql);
 conn.connect();
-
+console.log("连接数据库成功！");
 //封装返回数据
 let jsonBack=function(res,ret){
   if(typeof ret ==='undefined'){
