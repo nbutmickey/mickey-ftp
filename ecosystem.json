@@ -1,4 +1,4 @@
-module.exports = {
+{
   /**
    * Application configuration section
    * http://pm2.keymetrics.io/docs/usage/application-declaration/
@@ -16,12 +16,6 @@ module.exports = {
         NODE_ENV: 'production'
       }
     },
-
-    // Second application
-    {
-      name      : 'WEB',
-      script    : 'web.js'
-    }
   ],
 
   /**
@@ -36,7 +30,7 @@ module.exports = {
       repo : 'git@github.com:nbutmickey/mickey-ftp.git',
       path : '/root/myProject/production',
       "ssh_options": "StrictHostKeyChecking=false",
-      'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env production'
+      'post-deploy' : 'npm install && pm2 startOrRestart ecosystem.json --env production'
     },
     dev : {
       user : 'node',
@@ -44,7 +38,7 @@ module.exports = {
       ref  : 'origin/master',
       repo : 'git@github.com:repo.git',
       path : '/var/www/development',
-      'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env dev',
+      'post-deploy' : 'npm install && pm2 startOrRestart ecosystem.json --env dev',
       env  : {
         NODE_ENV: 'dev'
       }
