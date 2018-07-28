@@ -73,6 +73,7 @@
             let fileInfo=thisVue.handleFile(file);
             //从后端获取凭证
             thisVue.$axios.get('api/token').then(res=>{
+			console.log(res);
             console.log("getToken");
             let formData=new FormData();
             formData.append('file',file);
