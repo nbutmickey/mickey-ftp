@@ -7,7 +7,6 @@
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "build": "node build/build.js",
-	"start": "node ./server/bin/www"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.2",
