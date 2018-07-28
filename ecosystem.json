@@ -2,8 +2,7 @@
   "apps": [
     {
       "name": "mickey-ftp",
-      "script": "./server/bin/www",
-	  "exec_interpreter": "node",
+      "script": "./bin/www",
       "env": {
         "COMMON_VARIABLE": "true"
       },
