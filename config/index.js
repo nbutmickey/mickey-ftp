@@ -15,11 +15,11 @@ module.exports = {
         target: 'http://127.0.0.1:3000',
         changeOrigin: true,
       },
-      '/':{
+      '/fetchAll':{
         target:'http://rsf.qbox.me',
         changeOrigin: true,
         pathRewrite:{
-          '^/':''
+          '^/fetchAll':'/'
         }
       }
     },
