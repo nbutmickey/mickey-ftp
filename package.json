@@ -7,24 +7,25 @@
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "build": "node build/build.js",
-	"start":"node ./bin/www"
+    "start": "node ./bin/www"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.2",
     "@fortawesome/free-solid-svg-icons": "^5.2.0",
     "@fortawesome/vue-fontawesome": "^0.1.1",
     "axios": "^0.18.0",
-    "element-ui": "^2.4.4",
-    "vue": "^2.5.2",
-    "vue-router": "^3.0.1",
     "body-parser": "^1.18.3",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
+    "element-ui": "^2.4.4",
     "express": "~4.16.0",
+    "hmacsha1": "^1.0.0",
     "http-errors": "~1.6.2",
     "morgan": "~1.9.0",
     "mysql": "^2.16.0",
-    "qiniu": "^7.2.1"
+    "qiniu": "^7.2.1",
+    "vue": "^2.5.2",
+    "vue-router": "^3.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
