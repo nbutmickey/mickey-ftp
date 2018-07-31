@@ -61,7 +61,7 @@
     methods: {
       fetchAllList: function () {
         let ac = getToken('/list?bucket=mickey', '');
-        thisVue.$axios.get('fetchAll/list?bucket=mickey', {
+        thisVue.$axios.get('/list?bucket=mickey', {
           headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
             'Authorization': 'QBox ' + 'LzbIfbmRnl29eb3Ic24VZTT7zBde4ZGcxpU24Pcq:' + ac,
