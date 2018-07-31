@@ -6,6 +6,7 @@
     </header>
     <div class="ftp-list-container">
       <div class="ftp-list-head">文件列表</div>
+      <div v-if="upLoadAll">
       <div  class="ftp-list-item" v-for="(item) in listShow">
         <img :src=item.src class="ftp-list-item-fileImage"/>
         <div class="ftp-list-item-fileDetail">
@@ -15,6 +16,10 @@
         </div>
         <button type="button" class="ftp-list-item-downLoadButton" @click="downLoad(item.key)"><img src="../assets/download.svg" style="width: 18px;vertical-align: middle"/><span style="vertical-align: middle;font-size: 14px;margin-left: 2px;letter-spacing: 2px">下载</span></button>
       </div>
+      </div>
+        <div v-else style="text-align: center;color: red">
+          空空如也~
+        </div>
       <nav class="pagination">
         <span style="margin-right: 30px">当前：第 {{pageNow}} 页，总计：{{total}} 页</span>
         <a href="javascript:;"  class="prev" @click="prev">
@@ -24,6 +29,7 @@
           <font-awesome-icon :icon="['fas', 'angle-right']" />
         </a>
       </nav>
+
     </div>
     <footer>
       <span>@2017 - 2018 版权所有 | nbut_mickey</span>
